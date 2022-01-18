@@ -12,7 +12,8 @@ namespace PartC
 {
     public partial class CustomAssignments : Form
     {
-        string[] row;
+        string value;
+        string[,] assignments = new string[8,2];
         public CustomAssignments()
         {
             InitializeComponent();
@@ -25,7 +26,30 @@ namespace PartC
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           row[0] = 
+            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           value = Convert.ToString(dataGridView1.Rows[0].Cells[0].Value);
+           assignments[0,0] = value;
+           Test.Text = assignments[0,0];
+           for (int i = 0; i < 8; i++) {
+                for(int j = 0; j < 2; j++)
+                {
+
+                    assignments[i, j] = Convert.ToString(dataGridView1.Rows[0].Cells[0].Value);
+                }
+                
+            }
+
+        }
+
+        private void Test_Click(object sender, EventArgs e)
+        {
+            value = Convert.ToString(dataGridView1.Rows[0].Cells[0].Value);
+            Test.Text = value;
         }
     }
 }
