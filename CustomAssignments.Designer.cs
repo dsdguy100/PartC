@@ -30,11 +30,11 @@ namespace PartC
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.AssignmentTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HourDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Test = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.AssignmentTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblFormat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,29 +43,12 @@ namespace PartC
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AssignmentTitle,
-            this.DueDate,
-            this.HourDue});
+            this.DueDate});
             this.dataGridView1.Location = new System.Drawing.Point(174, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(452, 348);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // AssignmentTitle
-            // 
-            this.AssignmentTitle.HeaderText = "Assignment Name";
-            this.AssignmentTitle.Name = "AssignmentTitle";
-            this.AssignmentTitle.Width = 210;
-            // 
-            // DueDate
-            // 
-            this.DueDate.HeaderText = "DueDate";
-            this.DueDate.Name = "DueDate";
-            // 
-            // HourDue
-            // 
-            this.HourDue.HeaderText = "Hour Due";
-            this.HourDue.Name = "HourDue";
             // 
             // Test
             // 
@@ -87,11 +70,33 @@ namespace PartC
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // AssignmentTitle
+            // 
+            this.AssignmentTitle.HeaderText = "Assignment Name";
+            this.AssignmentTitle.Name = "AssignmentTitle";
+            this.AssignmentTitle.Width = 210;
+            // 
+            // DueDate
+            // 
+            this.DueDate.HeaderText = "DueDate";
+            this.DueDate.Name = "DueDate";
+            this.DueDate.Width = 300;
+            // 
+            // lblFormat
+            // 
+            this.lblFormat.AutoSize = true;
+            this.lblFormat.Location = new System.Drawing.Point(430, 4);
+            this.lblFormat.Name = "lblFormat";
+            this.lblFormat.Size = new System.Drawing.Size(180, 13);
+            this.lblFormat.TabIndex = 3;
+            this.lblFormat.Text = "Enter Date in: dd:hr:min (ie 01:09:30)";
+            // 
             // CustomAssignments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblFormat);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Test);
             this.Controls.Add(this.dataGridView1);
@@ -107,10 +112,10 @@ namespace PartC
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AssignmentTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HourDue;
         private System.Windows.Forms.Label Test;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AssignmentTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
+        private System.Windows.Forms.Label lblFormat;
     }
 }

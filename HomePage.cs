@@ -39,10 +39,10 @@ namespace PartC
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            String dueDate = "18:02:35:00";
+            String dueDate = "18:02:45";
             
             this.label1.Text = DateTime.Now.ToString("dd:hh:mm:ss");
-            if (DateTime.Now.ToString("dd:hh:mm:ss").Equals(dueDate))
+            if (DateTime.Now.ToString("dd:hh:mm").Equals(dueDate))
             {
                 //btnNotify.Text = "cringe";
                 notifyIcon1.Icon = new System.Drawing.Icon(Path.GetFullPath("icon.ico"));
