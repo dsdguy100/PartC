@@ -18,7 +18,8 @@ namespace PartC
             InitializeComponent();
 
         }
-
+        private string[,] dueDates = new string [8, 2];
+        private String dueDate = "";
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -32,26 +33,33 @@ namespace PartC
 
         private void btnNotify_Click(object sender, EventArgs e)
         {
-            
             timer1.Start();
 
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            String dueDate = "18:02:45";
-            
-            this.label1.Text = DateTime.Now.ToString("dd:hh:mm:ss");
-            if (DateTime.Now.ToString("dd:hh:mm").Equals(dueDate))
+            dueDate = dueDates[0, 1];
+            lblTester.Text = dueDate;
+            this.label1.Text = DateTime.Now.ToString("dd:hh:mm:ss");//remove seconds in final build
+
+
+            if (DateTime.Now.ToString("dd:hh:mm:ss").Equals(dueDate))
             {
-                //btnNotify.Text = "cringe";
-                notifyIcon1.Icon = new System.Drawing.Icon(Path.GetFullPath("icon.ico"));
+                lblTester.Text = "it Worked";
+                notifyIcon1.Icon = new System.Drawing.Icon(Path.GetFullPath("icon.ico"));//popUp Notification code
                 notifyIcon1.Text = "Based";
                 notifyIcon1.Visible = true;
                 notifyIcon1.BalloonTipTitle = "You have a due Assignment";
                 notifyIcon1.BalloonTipText = "An assignment is due";
                 notifyIcon1.ShowBalloonTip(100);
             }
+
+        }
+
+        private void btnPull_Click(object sender, EventArgs e)
+        {
+            dueDates = CustomAssignments.getAssignments();
         }
     }
 }

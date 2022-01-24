@@ -36,6 +36,8 @@ namespace PartC
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPull = new System.Windows.Forms.Button();
+            this.lblTester = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblHWTracker
@@ -81,17 +83,38 @@ namespace PartC
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(430, 367);
+            this.label1.Location = new System.Drawing.Point(430, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
+            // 
+            // btnPull
+            // 
+            this.btnPull.Location = new System.Drawing.Point(433, 366);
+            this.btnPull.Name = "btnPull";
+            this.btnPull.Size = new System.Drawing.Size(157, 23);
+            this.btnPull.TabIndex = 4;
+            this.btnPull.Text = "Load Assignments";
+            this.btnPull.UseVisualStyleBackColor = true;
+            this.btnPull.Click += new System.EventHandler(this.btnPull_Click);
+            // 
+            // lblTester
+            // 
+            this.lblTester.AutoSize = true;
+            this.lblTester.Location = new System.Drawing.Point(587, 253);
+            this.lblTester.Name = "lblTester";
+            this.lblTester.Size = new System.Drawing.Size(28, 13);
+            this.lblTester.TabIndex = 5;
+            this.lblTester.Text = "Test";
             // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTester);
+            this.Controls.Add(this.btnPull);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNotify);
             this.Controls.Add(this.AddCustom);
@@ -111,6 +134,8 @@ namespace PartC
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPull;
+        private System.Windows.Forms.Label lblTester;
     }
 }
 
