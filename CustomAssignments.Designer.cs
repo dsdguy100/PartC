@@ -30,11 +30,12 @@ namespace PartC
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Test = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.AssignmentTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Test = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblFormat = new System.Windows.Forms.Label();
+            this.btnPush = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +50,18 @@ namespace PartC
             this.dataGridView1.Size = new System.Drawing.Size(452, 348);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // AssignmentTitle
+            // 
+            this.AssignmentTitle.HeaderText = "Assignment Name";
+            this.AssignmentTitle.Name = "AssignmentTitle";
+            this.AssignmentTitle.Width = 210;
+            // 
+            // DueDate
+            // 
+            this.DueDate.HeaderText = "DueDate";
+            this.DueDate.Name = "DueDate";
+            this.DueDate.Width = 300;
             // 
             // Test
             // 
@@ -70,18 +83,6 @@ namespace PartC
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // AssignmentTitle
-            // 
-            this.AssignmentTitle.HeaderText = "Assignment Name";
-            this.AssignmentTitle.Name = "AssignmentTitle";
-            this.AssignmentTitle.Width = 210;
-            // 
-            // DueDate
-            // 
-            this.DueDate.HeaderText = "DueDate";
-            this.DueDate.Name = "DueDate";
-            this.DueDate.Width = 300;
-            // 
             // lblFormat
             // 
             this.lblFormat.AutoSize = true;
@@ -91,11 +92,22 @@ namespace PartC
             this.lblFormat.TabIndex = 3;
             this.lblFormat.Text = "Enter Date in: dd:hr:min (ie 01:09:30)";
             // 
+            // btnPush
+            // 
+            this.btnPush.Location = new System.Drawing.Point(523, 396);
+            this.btnPush.Name = "btnPush";
+            this.btnPush.Size = new System.Drawing.Size(75, 23);
+            this.btnPush.TabIndex = 4;
+            this.btnPush.Text = "Save";
+            this.btnPush.UseVisualStyleBackColor = true;
+            this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
+            // 
             // CustomAssignments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPush);
             this.Controls.Add(this.lblFormat);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Test);
@@ -117,5 +129,6 @@ namespace PartC
         private System.Windows.Forms.DataGridViewTextBoxColumn AssignmentTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.Label lblFormat;
+        private System.Windows.Forms.Button btnPush;
     }
 }
