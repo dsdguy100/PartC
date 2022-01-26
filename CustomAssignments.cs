@@ -29,12 +29,14 @@ namespace PartC
 
         private void CustomAssignments_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 8; i++)
+            {
+                this.dataGridView1.Rows.Add("", "");
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
 
         }
 
@@ -45,7 +47,8 @@ namespace PartC
            //above is testing dev code
 
 
-           for (int i = 0; i < 8; i++) {
+           for (int i = 0; i < 8; i++)
+            {
                 for(int j = 0; j < 2; j++)
                 {
 
