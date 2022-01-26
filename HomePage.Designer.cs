@@ -38,6 +38,8 @@ namespace PartC
             this.label1 = new System.Windows.Forms.Label();
             this.btnPull = new System.Windows.Forms.Button();
             this.lblTester = new System.Windows.Forms.Label();
+            this.RecievePop = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblHWTracker
@@ -63,11 +65,11 @@ namespace PartC
             // 
             // btnNotify
             // 
-            this.btnNotify.Location = new System.Drawing.Point(433, 285);
+            this.btnNotify.Location = new System.Drawing.Point(286, 296);
             this.btnNotify.Name = "btnNotify";
             this.btnNotify.Size = new System.Drawing.Size(199, 64);
             this.btnNotify.TabIndex = 2;
-            this.btnNotify.Text = "button1";
+            this.btnNotify.Text = "Start/Stop Timer";
             this.btnNotify.UseVisualStyleBackColor = true;
             this.btnNotify.Click += new System.EventHandler(this.btnNotify_Click);
             // 
@@ -83,7 +85,7 @@ namespace PartC
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(430, 254);
+            this.label1.Location = new System.Drawing.Point(753, 428);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
@@ -91,7 +93,7 @@ namespace PartC
             // 
             // btnPull
             // 
-            this.btnPull.Location = new System.Drawing.Point(433, 366);
+            this.btnPull.Location = new System.Drawing.Point(307, 366);
             this.btnPull.Name = "btnPull";
             this.btnPull.Size = new System.Drawing.Size(157, 23);
             this.btnPull.TabIndex = 4;
@@ -102,17 +104,39 @@ namespace PartC
             // lblTester
             // 
             this.lblTester.AutoSize = true;
-            this.lblTester.Location = new System.Drawing.Point(587, 253);
+            this.lblTester.Location = new System.Drawing.Point(709, 428);
             this.lblTester.Name = "lblTester";
             this.lblTester.Size = new System.Drawing.Size(28, 13);
             this.lblTester.TabIndex = 5;
             this.lblTester.Text = "Test";
+            // 
+            // RecievePop
+            // 
+            this.RecievePop.AutoSize = true;
+            this.RecievePop.Location = new System.Drawing.Point(527, 255);
+            this.RecievePop.Name = "RecievePop";
+            this.RecievePop.Size = new System.Drawing.Size(104, 17);
+            this.RecievePop.TabIndex = 6;
+            this.RecievePop.Text = "Windows Popup";
+            this.RecievePop.UseVisualStyleBackColor = true;
+            this.RecievePop.CheckedChanged += new System.EventHandler(this.RecievePop_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(527, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "How would you like to be notified";
             // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.RecievePop);
             this.Controls.Add(this.lblTester);
             this.Controls.Add(this.btnPull);
             this.Controls.Add(this.label1);
@@ -121,6 +145,7 @@ namespace PartC
             this.Controls.Add(this.lblHWTracker);
             this.Name = "Homepage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Homepage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +161,8 @@ namespace PartC
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPull;
         private System.Windows.Forms.Label lblTester;
+        private System.Windows.Forms.CheckBox RecievePop;
+        private System.Windows.Forms.Label label2;
     }
 }
 
