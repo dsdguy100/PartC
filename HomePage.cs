@@ -23,14 +23,9 @@ namespace PartC
 
         private int usePop = 0;
 
-        private string[,] dueDates = new string [8, 2];
+        private string[,] dueDates = new string [8, 2]; 
         private String dueDate = "";
         
-        
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void AddCustom_Click(object sender, EventArgs e)
         {
@@ -47,21 +42,27 @@ namespace PartC
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             dueDate = dueDates[0, 1];
-            lblTester.Text = dueDate;
-            this.label1.Text = DateTime.Now.ToString("dd:hh:mm:ss");//remove seconds in final build
             
-            if (DateTime.Now.ToString("dd:hh:mm:ss").Equals(dueDate))
+            this.label1.Text = DateTime.Now.ToString("dd:hh:mm:ss");//remove seconds in final build
+            for (int i = 0; i < 8; i++)
             {
-                this.timer1.Stop();
-                if (usePop == 1)
+                if (!dueDates[i, 1].Equals(""))
                 {
-                    PopUp();
+                    if (DateTime.Now.ToString("dd:hh:mm:ss").Equals(dueDates[i, 1]))
+                    {
+                        lblTester.Text = dueDate;
+                        //this.timer1.Stop();
+                        if (usePop == 1)
+                        {
+                            PopUp();
+                        }
+                    }
                 }
-
-                
             }
+            
 
         }
+
 
         private void btnPull_Click(object sender, EventArgs e)
         {
@@ -71,7 +72,15 @@ namespace PartC
 
         private void Homepage_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
 
+                    dueDates[i, j] = "";
+
+                }
+            }
         }
         
         private void PopUp()
@@ -90,9 +99,10 @@ namespace PartC
             usePop = 1;
         }
 
-
-
-
-
+        private void btnEmailForm_Click(object sender, EventArgs e)
+        {
+            Email jerry = new Email();
+            jerry.Show();
+        }
     }
 }
