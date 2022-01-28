@@ -52,7 +52,7 @@ namespace PartC
                 for(int j = 0; j < 2; j++)
                 {
 
-                    assignments[i, j] = Convert.ToString(dataGridView1.Rows[i].Cells[j].Value);//ended around here with notif not popping up and occasional crashes
+                    assignments[i, j] = Convert.ToString(dataGridView1.Rows[i].Cells[j].Value);
                     
                 }
             }
@@ -63,11 +63,6 @@ namespace PartC
         {
             //value = Convert.ToString(dataGridView1.Rows[0].Cells[2].Value);
             //Test.Text = value;
-        }
-
-        private void btnPush_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

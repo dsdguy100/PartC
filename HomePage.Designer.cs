@@ -40,6 +40,7 @@ namespace PartC
             this.lblTester = new System.Windows.Forms.Label();
             this.RecievePop = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnEmailForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHWTracker
@@ -85,7 +86,7 @@ namespace PartC
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(753, 428);
+            this.label1.Location = new System.Drawing.Point(450, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
@@ -104,7 +105,7 @@ namespace PartC
             // lblTester
             // 
             this.lblTester.AutoSize = true;
-            this.lblTester.Location = new System.Drawing.Point(709, 428);
+            this.lblTester.Location = new System.Drawing.Point(283, 280);
             this.lblTester.Name = "lblTester";
             this.lblTester.Size = new System.Drawing.Size(28, 13);
             this.lblTester.TabIndex = 5;
@@ -130,11 +131,22 @@ namespace PartC
             this.label2.TabIndex = 7;
             this.label2.Text = "How would you like to be notified";
             // 
+            // btnEmailForm
+            // 
+            this.btnEmailForm.Location = new System.Drawing.Point(530, 296);
+            this.btnEmailForm.Name = "btnEmailForm";
+            this.btnEmailForm.Size = new System.Drawing.Size(146, 23);
+            this.btnEmailForm.TabIndex = 8;
+            this.btnEmailForm.Text = "Enter Email Info";
+            this.btnEmailForm.UseVisualStyleBackColor = true;
+            this.btnEmailForm.Click += new System.EventHandler(this.btnEmailForm_Click);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEmailForm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.RecievePop);
             this.Controls.Add(this.lblTester);
@@ -163,6 +175,7 @@ namespace PartC
         private System.Windows.Forms.Label lblTester;
         private System.Windows.Forms.CheckBox RecievePop;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnEmailForm;
     }
 }
 

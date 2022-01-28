@@ -35,7 +35,6 @@ namespace PartC
             this.Test = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblFormat = new System.Windows.Forms.Label();
-            this.btnPush = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,22 +91,11 @@ namespace PartC
             this.lblFormat.TabIndex = 3;
             this.lblFormat.Text = "Enter Date in: dd:hr:min (ie 01:09:30)";
             // 
-            // btnPush
-            // 
-            this.btnPush.Location = new System.Drawing.Point(523, 396);
-            this.btnPush.Name = "btnPush";
-            this.btnPush.Size = new System.Drawing.Size(75, 23);
-            this.btnPush.TabIndex = 4;
-            this.btnPush.Text = "Save";
-            this.btnPush.UseVisualStyleBackColor = true;
-            this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
-            // 
             // CustomAssignments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnPush);
             this.Controls.Add(this.lblFormat);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Test);
@@ -129,6 +117,5 @@ namespace PartC
         private System.Windows.Forms.DataGridViewTextBoxColumn AssignmentTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.Label lblFormat;
-        private System.Windows.Forms.Button btnPush;
     }
 }
