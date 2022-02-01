@@ -27,11 +27,11 @@ namespace PartC
         private void btnSave_Click(object sender, EventArgs e)
         {
             
-            MailMessage mail = new MailMessage("wackwavydisposableemail@gmail.com", "dsdguy100@gmail.com", "Name and stuff", "Name and stuff");
+            MailMessage mail = new MailMessage( "dsdguy100@gmail.com", "wackwavydisposableemail@gmail.com", "Name and stuff", "Name and stuff");
             //mail.Attachments.Add(new Attachment("text goes here"));
             SmtpClient client = new SmtpClient("smtp.gmail.com");
-            client.Port = 587;
-            client.Credentials = new System.Net.NetworkCredential("wackwavydisposableemail@gmail.com", "123456789!");
+            client.Port = 465;
+            client.Credentials = new System.Net.NetworkCredential("wackwavydisposableemail@gmail.com", "One2345!");
             client.EnableSsl = true;
             client.Send(mail);
             MessageBox.Show("Mail Sent!");
