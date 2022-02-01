@@ -22,6 +22,7 @@ namespace PartC
         }
 
         private int usePop = 0;
+        private int useSysPop = 0;
 
         private string[,] dueDates = new string [8, 2]; 
         private String dueDate = "";
@@ -41,7 +42,7 @@ namespace PartC
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            dueDate = dueDates[0, 1];
+            
             
             this.label1.Text = DateTime.Now.ToString("dd:hh:mm:ss");//remove seconds in final build
             for (int i = 0; i < 8; i++)
@@ -50,12 +51,18 @@ namespace PartC
                 {
                     if (DateTime.Now.ToString("dd:hh:mm:ss").Equals(dueDates[i, 1]))
                     {
+                        dueDate = dueDates[i, 0];
                         lblTester.Text = dueDate;
                         //this.timer1.Stop();
                         if (usePop == 1)
                         {
                             PopUp();
                         }
+                        if (useSysPop == 1)
+                        {
+                            MessageBox.Show(dueDate, "You have an assignment due");
+                        }
+
                     }
                 }
             }
@@ -66,9 +73,10 @@ namespace PartC
 
         private void btnPull_Click(object sender, EventArgs e)
         {
-            
+
             dueDates = CustomAssignments.getAssignments();
         }
+
 
         private void Homepage_Load(object sender, EventArgs e)
         {
@@ -83,6 +91,7 @@ namespace PartC
             }
         }
         
+
         private void PopUp()
         {
             lblTester.Text = "it Worked";
@@ -90,19 +99,26 @@ namespace PartC
             notifyIcon1.Text = "Based";
             notifyIcon1.Visible = true;
             notifyIcon1.BalloonTipTitle = "You have a due Assignment";
-            notifyIcon1.BalloonTipText = "An assignment is due";
+            notifyIcon1.BalloonTipText = dueDate;
             notifyIcon1.ShowBalloonTip(100);
         }
+
 
         private void RecievePop_CheckedChanged(object sender, EventArgs e)
         {
             usePop = 1;
         }
 
+
         private void btnEmailForm_Click(object sender, EventArgs e)
         {
             Email jerry = new Email();
             jerry.Show();
+        }
+
+        private void recieveBox_CheckedChanged(object sender, EventArgs e)
+        {
+            useSysPop = 1;
         }
     }
 }
