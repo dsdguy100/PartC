@@ -41,6 +41,7 @@ namespace PartC
             this.RecievePop = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEmailForm = new System.Windows.Forms.Button();
+            this.recieveBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblHWTracker
@@ -56,7 +57,7 @@ namespace PartC
             // AddCustom
             // 
             this.AddCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCustom.Location = new System.Drawing.Point(433, 144);
+            this.AddCustom.Location = new System.Drawing.Point(279, 113);
             this.AddCustom.Name = "AddCustom";
             this.AddCustom.Size = new System.Drawing.Size(243, 65);
             this.AddCustom.TabIndex = 1;
@@ -114,7 +115,7 @@ namespace PartC
             // RecievePop
             // 
             this.RecievePop.AutoSize = true;
-            this.RecievePop.Location = new System.Drawing.Point(527, 255);
+            this.RecievePop.Location = new System.Drawing.Point(552, 141);
             this.RecievePop.Name = "RecievePop";
             this.RecievePop.Size = new System.Drawing.Size(104, 17);
             this.RecievePop.TabIndex = 6;
@@ -125,7 +126,7 @@ namespace PartC
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(527, 236);
+            this.label2.Location = new System.Drawing.Point(549, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 13);
             this.label2.TabIndex = 7;
@@ -133,7 +134,7 @@ namespace PartC
             // 
             // btnEmailForm
             // 
-            this.btnEmailForm.Location = new System.Drawing.Point(530, 296);
+            this.btnEmailForm.Location = new System.Drawing.Point(530, 366);
             this.btnEmailForm.Name = "btnEmailForm";
             this.btnEmailForm.Size = new System.Drawing.Size(146, 23);
             this.btnEmailForm.TabIndex = 8;
@@ -141,11 +142,23 @@ namespace PartC
             this.btnEmailForm.UseVisualStyleBackColor = true;
             this.btnEmailForm.Click += new System.EventHandler(this.btnEmailForm_Click);
             // 
+            // recieveBox
+            // 
+            this.recieveBox.AutoSize = true;
+            this.recieveBox.Location = new System.Drawing.Point(552, 165);
+            this.recieveBox.Name = "recieveBox";
+            this.recieveBox.Size = new System.Drawing.Size(112, 17);
+            this.recieveBox.TabIndex = 9;
+            this.recieveBox.Text = "Application Popup";
+            this.recieveBox.UseVisualStyleBackColor = true;
+            this.recieveBox.CheckedChanged += new System.EventHandler(this.recieveBox_CheckedChanged);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.recieveBox);
             this.Controls.Add(this.btnEmailForm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.RecievePop);
@@ -176,6 +189,7 @@ namespace PartC
         private System.Windows.Forms.CheckBox RecievePop;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEmailForm;
+        private System.Windows.Forms.CheckBox recieveBox;
     }
 }
 

@@ -27,7 +27,7 @@ namespace PartC
         private void btnSave_Click(object sender, EventArgs e)
         {
             
-            MailMessage mail = new MailMessage( "dsdguy100@gmail.com", "wackwavydisposableemail@gmail.com", "Name and stuff", "Name and stuff");
+            MailMessage mail = new MailMessage( "wackwavydisposableemail@gmail.com", this.textBox1.Text,"Name and stuff", "Name and stuff");
             //mail.Attachments.Add(new Attachment("text goes here"));
             SmtpClient client = new SmtpClient("smtp.gmail.com");
             client.Port = 465;
