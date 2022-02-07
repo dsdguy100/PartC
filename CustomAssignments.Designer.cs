@@ -32,7 +32,6 @@ namespace PartC
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AssignmentTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblFormat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,23 +61,13 @@ namespace PartC
             this.DueDate.Name = "DueDate";
             this.DueDate.Width = 300;
             // 
-            // Test
-            // 
-            this.Test.AutoSize = true;
-            this.Test.Location = new System.Drawing.Point(75, 388);
-            this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(35, 13);
-            this.Test.TabIndex = 1;
-            this.Test.Text = "label1";
-            this.Test.Click += new System.EventHandler(this.Test_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(361, 397);
+            this.button1.Location = new System.Drawing.Point(337, 398);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "btnTest";
+            this.button1.Text = "Push Assignments";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -98,7 +87,6 @@ namespace PartC
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblFormat);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Test);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CustomAssignments";
             this.Text = "Form1";
@@ -112,7 +100,6 @@ namespace PartC
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label Test;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssignmentTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;

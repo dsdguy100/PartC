@@ -42,6 +42,10 @@ namespace PartC
             this.label2 = new System.Windows.Forms.Label();
             this.btnEmailForm = new System.Windows.Forms.Button();
             this.recieveBox = new System.Windows.Forms.CheckBox();
+            this.FiveBefore = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TenBefore = new System.Windows.Forms.CheckBox();
+            this.HourBefore = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblHWTracker
@@ -57,7 +61,7 @@ namespace PartC
             // AddCustom
             // 
             this.AddCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCustom.Location = new System.Drawing.Point(279, 113);
+            this.AddCustom.Location = new System.Drawing.Point(264, 141);
             this.AddCustom.Name = "AddCustom";
             this.AddCustom.Size = new System.Drawing.Size(243, 65);
             this.AddCustom.TabIndex = 1;
@@ -128,9 +132,9 @@ namespace PartC
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(549, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 13);
+            this.label2.Size = new System.Drawing.Size(179, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "How would you like to be notified";
+            this.label2.Text = "How Would You Like To Be Notified";
             // 
             // btnEmailForm
             // 
@@ -153,11 +157,57 @@ namespace PartC
             this.recieveBox.UseVisualStyleBackColor = true;
             this.recieveBox.CheckedChanged += new System.EventHandler(this.recieveBox_CheckedChanged);
             // 
+            // FiveBefore
+            // 
+            this.FiveBefore.AutoSize = true;
+            this.FiveBefore.Location = new System.Drawing.Point(35, 141);
+            this.FiveBefore.Name = "FiveBefore";
+            this.FiveBefore.Size = new System.Drawing.Size(80, 17);
+            this.FiveBefore.TabIndex = 10;
+            this.FiveBefore.Text = "Five Before";
+            this.FiveBefore.UseVisualStyleBackColor = true;
+            this.FiveBefore.CheckedChanged += new System.EventHandler(this.FiveBefore_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "When Would You Like To Be Notified";
+            // 
+            // TenBefore
+            // 
+            this.TenBefore.AutoSize = true;
+            this.TenBefore.Location = new System.Drawing.Point(35, 165);
+            this.TenBefore.Name = "TenBefore";
+            this.TenBefore.Size = new System.Drawing.Size(79, 17);
+            this.TenBefore.TabIndex = 12;
+            this.TenBefore.Text = "Ten Before";
+            this.TenBefore.UseVisualStyleBackColor = true;
+            this.TenBefore.CheckedChanged += new System.EventHandler(this.TenBefore_CheckedChanged);
+            // 
+            // HourBefore
+            // 
+            this.HourBefore.AutoSize = true;
+            this.HourBefore.Location = new System.Drawing.Point(35, 188);
+            this.HourBefore.Name = "HourBefore";
+            this.HourBefore.Size = new System.Drawing.Size(80, 17);
+            this.HourBefore.TabIndex = 13;
+            this.HourBefore.Text = "HourBefore";
+            this.HourBefore.UseVisualStyleBackColor = true;
+            this.HourBefore.CheckedChanged += new System.EventHandler(this.HourBefore_CheckedChanged);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HourBefore);
+            this.Controls.Add(this.TenBefore);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.FiveBefore);
             this.Controls.Add(this.recieveBox);
             this.Controls.Add(this.btnEmailForm);
             this.Controls.Add(this.label2);
@@ -190,6 +240,10 @@ namespace PartC
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEmailForm;
         private System.Windows.Forms.CheckBox recieveBox;
+        private System.Windows.Forms.CheckBox FiveBefore;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox TenBefore;
+        private System.Windows.Forms.CheckBox HourBefore;
     }
 }
 
