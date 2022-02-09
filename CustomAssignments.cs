@@ -42,10 +42,6 @@ namespace PartC
 
         private void button1_Click(object sender, EventArgs e)
         {
-           //value = Convert.ToString(dataGridView1.Rows[0].Cells[1].Value);
-           //assignments[0,0] = value;
-           //above is testing dev code
-
 
            for (int i = 0; i < 8; i++)
             {
@@ -57,12 +53,6 @@ namespace PartC
                 }
             }
 
-        }
-
-        private void Test_Click(object sender, EventArgs e)
-        {
-            //value = Convert.ToString(dataGridView1.Rows[0].Cells[2].Value);
-            //Test.Text = value;
         }
 
     }
