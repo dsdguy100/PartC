@@ -90,7 +90,9 @@ namespace PartC
             this.Controls.Add(this.lblFormat);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomAssignments";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "The Jesus Chamber";
             this.Load += new System.EventHandler(this.CustomAssignments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
